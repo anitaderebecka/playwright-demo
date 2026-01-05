@@ -1,0 +1,16 @@
+{
+  "name": "priv",
+  "scripts": {
+    "spec": "npx dotenvx run -f .env.stage -- playwright test--repeat-each 1 tests --grep-invert @mobileOnly"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.38.4",
+    "@faker-js/faker": "^7.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1",
+    "prettier-config-standard": "^7.0.0"
+  }
+}
