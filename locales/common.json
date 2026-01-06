@@ -1,0 +1,13 @@
+{
+  "account": {
+    "login": "Zaloguj się",
+    "emailPlaceholder": "email lub nazwa użytkownika",
+    "passwordPlaceholder": "hasło",
+    "invalidCredentialsError": "Błędna nazwa użytkownika bądź hasło"
+  },
+
+  "header": {
+    "login": "Zaloguj się",
+    "addMovie": "Dodaj film"
+  }
+}
