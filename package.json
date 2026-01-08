@@ -1,7 +1,8 @@
 {
   "name": "priv",
   "scripts": {
-    "spec": "npx dotenvx run -f .env.stage -- playwright test--repeat-each 1 tests --grep-invert @mobileOnly"
+    "spec": "npx dotenvx run -f .env.staging -- playwright test --repeat-each 1 tests",
+    "spec:smoke": "npx dotenvx run -f .env.staging -- playwright test --repeat-each 1 tests -grep @smoke"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.38.4",
