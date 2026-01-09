@@ -1,7 +1,7 @@
 name: 'Playwright Tests'
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   workflow_dispatch:
     inputs:
       environment:
@@ -22,7 +22,7 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment }}
+    environment: ${{ github.event.inputs.environment || 'staging' }}
     env:
       BASE_URL: ${{ secrets.BASE_URL }}
       USER_EMAIL: ${{ secrets.USER_EMAIL }}
