@@ -8,7 +8,7 @@ export class HomePage {
     await this.page.goto(process.env.BASE_URL)
     if (isFirst) {
       const cookieModal = new CookieModal(this.page)
-      await cookieModal.cookiesAcceptBtn.click()
+      await cookieModal.acceptCookiesIfShown()
     }
     await this.page.waitForLoadState('domcontentloaded')
   }

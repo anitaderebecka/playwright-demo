@@ -17,15 +17,19 @@ on:
         options:
           - regression
           - smoke
+      any_decision:
+        description: 'Display this text?'
+        type: boolean
+        required: true
 
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment }}
+    environment: ${{ github.event.inputs.environment || 'staging' }}
     env:
-      BASE_URL: ${{ secrets.BASE_URL }}
-      USER_EMAIL: ${{ secrets.USER_EMAIL }}
+      BASE_URL: ${{ vars.BASE_URL }}
+      USER_EMAIL: ${{ vars.USER_EMAIL }}
       USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
