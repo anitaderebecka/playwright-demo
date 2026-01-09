@@ -17,10 +17,6 @@ on:
         options:
           - regression
           - smoke
-      any_decision:
-        description: 'Display this text?'
-        type: boolean
-        required: true
 
 jobs:
   test:
